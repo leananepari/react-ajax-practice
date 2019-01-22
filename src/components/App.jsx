@@ -20,8 +20,6 @@ class App extends React.Component {
         name: $('#name').val(),
         message: $('#message').val()
     }
-    console.log("clicked")
-    console.log(input)
         $.ajax({
           url: 'http://ec2-13-57-25-101.us-west-1.compute.amazonaws.com:3000/api/hrsf110/greeting',
           type: 'POST',
@@ -35,10 +33,6 @@ class App extends React.Component {
           }
         });
     
-  }
-
-  append(response) {
-      document.$('#response').append(response);
   }
 
     render() {
